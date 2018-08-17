@@ -1,5 +1,5 @@
 
-        #nural network class definition
+      #nural network class definition
 class neuralNetwork:
     
     #initialise the neural network
