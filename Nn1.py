@@ -40,23 +40,7 @@ import numpy as np
 numpy.random.rand(3,3)-0.5
 
 
-import numpy as np
 
-def get_tile_images(image, width=8, height=8):
-    _nrows, _ncols, depth = image.shape
-    _size = image.size
-    _strides = image.strides
-
-    nrows, _m = divmod(_nrows, height)
-    ncols, _n = divmod(_ncols, width)
-    if _m != 0 or _n != 0:
-        return None
-
-    return np.lib.stride_tricks.as_strided(
-        np.ravel(image),
-        shape=(nrows, ncols, height, width, depth),
-        strides=(height * _strides[0], width * _strides[1], *_strides),
-        writeable=False
         
         
         
